@@ -1,5 +1,6 @@
 #pragma once         // Include this header only once per build
-#include <Arduino.h> // Needed for the Arduino `String` type
+#include <Arduino.h> // Needed for the Arduino `String` type and uint16_t
+#include "core/type.h"
 
 namespace wifi_config_manager
 {
@@ -11,5 +12,7 @@ namespace wifi_config_manager
     String getApSsid();             // Name of the Wi-Fi network the ESP32 creates (for the LCD guide)
     String getApPassword();         // Password of that network (for the LCD guide)
     String getApIp();               // IP address of the web page (for the LCD guide)
-    String getReceivedSsid();
+
+    WifiConfig getWifiConfig(); // Everything received for Wi-Fi (replaces getReceivedSsid)
+    MqttConfig getMqttConfig(); // Everything received for the MQTT broker
 }
