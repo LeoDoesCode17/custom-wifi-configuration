@@ -21,6 +21,7 @@ namespace pages
             {"Sensors", PageId::Sensors},
             {"Control", PageId::Control},
             {"Network", PageId::Network},
+            {"Wifi Config", PageId::WifiConfig}, // new
             {"Settings", PageId::Settings},
             {"About", PageId::About},
         };
