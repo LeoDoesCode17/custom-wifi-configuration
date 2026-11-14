@@ -4,6 +4,8 @@
 #include "ui/landing_page.h"
 #include "ui/menu_page.h"
 #include "ui/sub_page.h"
+#include "ui/wifi_configuration_page.h"
+#include "ui/config_mode_page.h"
 
 namespace
 {
@@ -29,6 +31,10 @@ namespace
             return &pages::settings_page;
         case pages::PageId::About:
             return &pages::about_page;
+        case pages::PageId::WifiConfig:
+            return &pages::wifi_configuration_page;
+        case pages::PageId::ConfigMode:
+            return &pages::config_mode_page;
         }
         return &pages::landing_page;
     }
