@@ -11,5 +11,7 @@ namespace pages
         Network,
         Settings,
         About,
+        WifiConfig,
+        ConfigMode,
     };
 }
