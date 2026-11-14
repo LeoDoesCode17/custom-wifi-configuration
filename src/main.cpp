@@ -3,6 +3,7 @@
 #include <LiquidCrystal_I2C.h>
 #include "managers/page_manager.h"
 #include "managers/sensor_manager.h"
+#include "managers/wifi_config_manager.h"
 
 // Define I2C pins for ESP32-S3 (change if your board uses different pins)
 #define SDA_PIN 8
@@ -29,5 +30,6 @@ void setup()
 
 void loop()
 {
+  wifi_config_manager::update();
   page_manager::update();
 }
